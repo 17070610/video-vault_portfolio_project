@@ -12,7 +12,7 @@ const Customer = mongoose.model("Customer", new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  contact: {
+  phone: {
     type: String,
     required: true,
     minlength: 3,
