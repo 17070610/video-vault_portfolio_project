@@ -1,7 +1,6 @@
 const {Rental, validate} = require('../models/rental');
 const {Movie} = require('../models/movie');
 const {Customer} = require('../models/customer');
-const Fawn = require('fawn');
 const express = require('express');
 const router = express.Router();
 
@@ -41,7 +40,6 @@ router.post('/', async (req, res) => {
 
   res.send(rental);
 });
-
 router.get('/:id', async (req, res) => {
   const rental = await Rental.findById(req.params.id);
 
